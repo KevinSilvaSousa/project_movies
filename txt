@@ -1,0 +1,9 @@
+objects.get()
+objects.filter()
+.save()
+.delete()
+request.POST
+render
+redirect
+URLs
+Templates
