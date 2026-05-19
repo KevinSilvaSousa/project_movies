@@ -4,7 +4,9 @@ from django.db import models
 
 
 class MoviesModel(models.Model):
-    movies = models.CharField(max_length=1000, min_length=1)
+    movies = models.CharField(max_length=1000)
     ano_lascamento = models.IntegerField()
-    genero = models.CharField(max_length=1000, min_length=1)
+    genero = models.CharField(max_length=1000)
     
+    def __str__(self):
+        return self.movies
