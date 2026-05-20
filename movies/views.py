@@ -1,11 +1,22 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from .models import MoviesModel
 
 
 
-def view_movies(request, lista):
-    return HttpResponse ("Pagina de filmes")
+def criar_movies(request):
+    if request.method == 'GET':
+        movie = MoviesModel.objects.all()
+        print(movie)
+        return HttpResponse ("Pagina de filmes")
+
+    
+    elif request.method == 'POST':
+        movies = MoviesModel(name=movies)
+        movies.save()
+        return redirect ('criar_movies')
+    
+
 
 
 def get_movies(request, id):
