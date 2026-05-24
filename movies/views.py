@@ -3,6 +3,8 @@ from django.http import HttpResponse
 from .models import MoviesModel
 
 
+def inicio(request):
+    return render (request, 'inicio.html')
 
 def criar_movies(request):
     if request.method == 'GET':
